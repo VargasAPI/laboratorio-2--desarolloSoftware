@@ -1,0 +1,33 @@
+.btn-compras {
+  background-color: #8cbc00;
+  display: block;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 900;
+  padding: 1rem;
+  transition: background-color 0.3s ease-out;
+}
+
+.btn-compras:hover {
+  background-color: #769c02;
+}
+
+.btn-nav {
+  background-color: #fff;
+  display: block;
+  color: #666;
+  text-transform: uppercase;
+  font-weight: 900;
+  padding: 1rem;
+  border-radius: 8px;
+  padding: 1rem 5rem; /*1rem es en ancho y 10rem en largo*/
+}
+
+.btn-nav:hover {
+  background-color: #3b8ab8;
+  color: #fff;
+  border-radius: 8px;
+  padding: 1rem 5rem; /*1rem es en ancho y 5 rem en largo*/
+}
+
+
