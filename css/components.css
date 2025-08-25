@@ -11,11 +11,11 @@
 .btn-compras:hover {
   background-color: #769c02;
 }
-
+/* Botón de navegación */
 .btn-nav {
   background-color: #fff;
   display: block;
-  color: #666;
+  color: #4d4c4c;
   text-transform: uppercase;
   font-weight: 900;
   padding: 1rem;
@@ -29,5 +29,34 @@
   border-radius: 8px;
   padding: 1rem 5rem; /*1rem es en ancho y 5 rem en largo*/
 }
+
+/* Estilos específicos para la sección de registro */
+.registro button {
+    background-color: #037bc0;
+    color: #fff;
+    border: none;
+    border-radius: .5rem;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    padding: 1.5rem;
+}
+
+.registro button:hover {
+  background-color: #025f91;
+}
+
+/* Ejemplo de position absolute */
+.registro::after {
+  content: "✓ Registro seguro";
+  position: absolute;
+  bottom: 1rem;
+  right: 2rem;
+  font-size: 1.2rem;
+  color: #037bc0;
+  opacity: 0.7;
+}
+
 
 

@@ -102,15 +102,9 @@ nav a {
   display: flex;
   justify-content: space-between;
   transition: background-color .3s ease-out;
- 
-  
   /*espacio entre los elementos*/
 }
 
-/* .nav-principal a:hover{
-    background-color: #3b8ab8;
-    color: #fff;
-} */
 
 .hero {
   background-image: url(../assets/principal.jpg);

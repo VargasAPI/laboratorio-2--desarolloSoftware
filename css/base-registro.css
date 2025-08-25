@@ -1,0 +1,165 @@
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  /* HACK: 1rem = 10px */
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+  font-size: 1.6rem;
+  /* 16px */
+  line-height: 2;
+  /*line-height es el espacio entre lineas*/
+}
+
+/* Globales */
+
+h1,
+h2,
+h3 {
+  font-family: "Playfair", serif;
+  margin: 0 0 5rem 0;
+  /*margin: top right bottom left*/
+}
+
+.contenedor {
+  /*max-width: 1200px; es el ancho maximo de la pagina*/
+  max-width: 120rem;
+  margin: 0 auto;
+  /*centra el contenedor*/
+}
+
+a {
+  text-decoration: none;
+  /*quita el subrayado*/
+  color: black;
+}
+
+h1 {
+  font-size: 5rem;
+}
+
+h2 {
+  font-size: 4rem;
+}
+
+h3 {
+  font-size: 3rem;
+}
+
+/********************************************/
+
+/*Utilidades*/
+.text-center {
+  text-align: center;
+  /*centra el texto*/
+}
+
+/*********************************************/
+
+/*Header y navegacion*/
+.nombre-sitio{
+    margin-top: 5rem;
+    text-align: center;
+}
+
+.nombre-sitio span{
+    color: #037bc0;;
+}
+
+.nav-principal{
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    display: flex;
+    justify-content:space-between;
+}
+
+.contenedor-navegacion {
+  border-top: 1px solid #e1e1e1;
+  
+}
+
+nav a {
+  text-transform: uppercase;
+   
+}
+
+/**Registro**/
+.registro{
+    max-width: 60rem;
+    margin: 5rem auto;
+    padding: 3rem;
+    border: 1px solid #e1e1e1;
+    border-radius: 1rem;
+    background-color: #f9f9f9;
+    position: relative; /* Para posicionar el pseudo-elemento */
+    overflow-x: hidden; /* Evita que el pseudo-elemento desborde */
+}
+
+.registro h2{
+    text-align: center;
+    margin-bottom: 3rem;
+    color: #037bc0;
+}
+.registro form {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.registro label {
+    font-weight: bold;
+    margin-bottom: 1.6rem;
+}
+.registro input,
+.registro select{
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: .5rem;
+    font-size: 1.6rem;
+    width: 100%;
+}
+
+.btn:focus-visible {
+  outline: 3px solid #f39c12;  /* un borde resaltado */
+  outline-offset: 3px;         /* separación entre borde y botón */
+}
+
+/**Footer**/
+.site-footer{
+   border-top: 1px solid #e1e1e1;
+  margin-top: 5rem;
+  padding: 5rem;
+}
+.site-footer h3 {
+  margin-bottom: 0.5rem;
+}
+.grid-footer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  /*3 columnas de igual tamaño para las fotos*/
+  gap: 2rem;
+}
+.footer-menu a {
+  display: block;
+  transition: background-color 0.3s ease-out;
+}
+.footer-menu a:hover {
+  color: #037bc0;
+}
+
+.copyright {
+  text-align: center;
+  /*centra el texto*/
+  margin-top: 2rem;
+  color: #666;
+  font-size: 1.4rem;
+}
+
+
+
