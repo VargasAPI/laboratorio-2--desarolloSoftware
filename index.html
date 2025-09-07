@@ -1,148 +1,254 @@
 <!DOCTYPE html>
 <html lang="es">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MueblesColon</title>
-    <link rel="stylesheet" href="css/app.css" />
-</head>
-
-<body>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/overrides.css" />
+  </head>
+  <body>
+    <!-- Inicio de la estructura -->
     <header>
-        <h1 class="nombre-sitio">Tienda <span>Muebles</span></h1>
+      <h1 class="nombre-sitio">Tienda <span>Muebles</span></h1>
     </header>
     <!-- Menú con anclajes internos -->
-    <nav class="nav-principal contenedor">
-        <a href="index.html">Inicio</a>
-        <a href="categorias">Categorías</a>
-        <a href="#sobre-nosotros">Sobre Nosotros</a>
-        <a href="productos">Productos</a>
-        <a href="#agenda">Agenda</a>
-        <a href="registro.html">Registro</a>
-        <a href="https://www.tec.ac.cr" target="_blank" rel="noopener noreferrer">TEC</a>
+    <div class="contenedor-navegacion">
+      <nav class="nav-principal contenedor">
+        <a  class="btn-nav"   href="index.html">Inicio</a>
+        <a  class="btn-nav" href="categorias">Categorías</a>
+        <a  class="btn-nav" href="#sobre-nosotros">Nosotros</a>
+        <a  class="btn-nav" href="productos">Productos</a>
+        <a  class="btn-nav" href="#agenda">Agenda</a>
+        <a  class="btn-nav" href="registro.html">Registro</a>
+        <a  class="btn-nav"
+          href="https://www.tec.ac.cr"
+          target="_blank"
+          rel="noopener noreferrer"
+          >TEC</a
+        >
         <!-- enlace externo (NO ENTENDI CUAL ENLACE SE DEBIA INSERTAR)-->
-    </nav>
-
+      </nav>
+    </div>
 
     <div class="hero"></div>
 
     <!--  Agenda con tabla -->
     <section id="agenda">
-        <h2>Agenda de promociones</h2>
-        <table aria-label="Tabla de agenda de promociones">
-            <thead>
-                <tr>
-                    <th>Fecha</th>
-                    <th>Evento</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>15/08/2025</td>
-                    <td>Feria de descuentos</td>
-                </tr>
-                <tr>
-                    <td>20/08/2025</td>
-                    <td>Exposición de nuevos productos</td>
-                </tr>
-            </tbody>
-        </table>
+      <h2>Agenda de promociones</h2>
+      <table aria-label="Tabla de agenda de promociones">
+        <thead>
+          <tr>
+            <th>Fecha</th>
+            <th>Evento</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="info-promo">
+            <td>15/9/2025</td>
+            <td>Feria de descuentos</td>
+          </tr>
+          <tr class="info-promo">
+            <td>20/010/2025</td>
+            <td>Exposición de nuevos productos</td>
+          </tr>
+        </tbody>
+      </table>
     </section>
 
-    <!-- cATEGORIAS -->
-    <section id="categorias">
-        <h2>Categorías de productos</h2>
-        <article>
-            <figure>
-                <img src="assets/categoria1.jpg" alt="Muebles de oficina modernos" tabindex="0" />
-                <figcaption>Muebles para oficina</figcaption>
-            </figure>
-            <a href="#">Oficina</a>
-        </article>
+    <!-- CATEGORIAS -->
 
-        <article>
-            <img src="assets/categoria2.jpg" alt="Muebles para el hogar" tabindex="-1" />
-            <a href="#">Hogar</a>
-        </article>
+    <section class="contenedor categorias">
+      <h2 class="text-center">Categorias de productos</h2>
+      <div class="listado-categorias">
+        <div class="categoria">
+          <img src="assets/categoria1.jpg" alt="Imagen Categoria" />
+          <a href="#">Oficina</a>
+        </div>
 
-        <article>
-            <img src="assets/categoria3.jpg" alt="Muebles para cocina" />
-            <a href="#">Cocina</a>
-        </article>
+        <div class="categoria">
+          <img src="assets/categoria2.jpg" alt="Imagen Categoria" />
+          <a href="#">Hogar</a>
+        </div>
+
+        <div class="categoria">
+          <img src="assets/categoria3.jpg" alt="Imagen Categoria" />
+          <a href="#">Cocina</a>
+        </div>
+      </div>
     </section>
 
     <!--  Sobre Nosotros -->
     <section id="sobre-nosotros">
-        <h2>Sobre nosotros</h2>
-        <p>Somos una empresa dedicada a ofrecer los mejores muebles con calidad garantizada.</p>
-        <blockquote>"El diseño no es solo cómo se ve o se siente. El diseño es cómo funciona." - Steve Jobs</blockquote>
+      <div class="contenedor sobre-nosotros-grid">
+        <div class="texto-nosotros">
+          <h2>Sobre nosotros</h2>
+          <p>
+            Somos una empresa dedicada a ofrecer los mejores muebles con calidad
+            garantizada.
+          </p>
+          <blockquote>
+            "El diseño no es solo cómo se ve o se siente. El diseño es cómo
+            funciona." - Steve Jobs
+          </blockquote>
+        </div>
+      </div>
     </section>
 
     <!--  Productos -->
-    <main id="productos">
-        <h2>Nuestros productos</h2>
-        <div>
-            <article>
-                <img src="assets/producto1.jpg" alt="Silla ergonómica" />
-                <h3>Producto 1</h3>
-                <p>Silla ergonómica ideal para oficina.</p>
-                <p>$1,000,000</p>
-                <a href="#" aria-label="Agregar Producto 1 al carrito">Agregar al carrito</a>
-            </article>
+    <main class="contenido-principal contenedor">
+      <h2 class="text-center">Nuestros productos</h2>
 
-            <article>
-                <img src="assets/producto2.jpg" alt="Mesa de comedor" />
-                <h3>Producto 2</h3>
-                <p>Mesa de comedor moderna.</p>
-                <p>$2,000,000</p>
-                <a href="#">Agregar al carrito</a>
-            </article>
+      <div class="listado-productos">
+        <div class="producto">
+          <img src="assets/producto1.jpg" alt="Imagen Producto" />
+
+          <div class="texto-producto">
+            <h3>Producto 1</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit eos
+              quis nesciunt et accusamus, explicabo illum. Molestias, modi vitae
+              quod laborum eos, ratione cumque maiores vel eaque, labore eius
+              quas.
+            </p>
+            <p class="precio">$1,000,000</p>
+            <a class="btn-compras" href="#">Agregar al carrito</a>
+          </div>
+          <!-- Info de producto -->
         </div>
+        <!-- Producto -->
+
+        <div class="producto">
+          <img src="assets/producto2.jpg" alt="Imagen Producto" />
+
+          <div class="texto-producto">
+            <h3>Producto 2</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit eos
+              quis nesciunt et accusamus, explicabo illum. Molestias, modi vitae
+              quod laborum eos, ratione cumque maiores vel eaque, labore eius
+              quas.
+            </p>
+            <p class="precio">$2,000,000</p>
+            <a class="btn-compras" href="#">Agregar al carrito</a>
+          </div>
+          <!-- Info de producto -->
+        </div>
+        <!-- Producto -->
+
+        <div class="producto">
+          <img src="assets/producto3.jpg" alt="Imagen Producto" />
+
+          <div class="texto-producto">
+            <h3>Producto 3</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit eos
+              quis nesciunt et accusamus, explicabo illum. Molestias, modi vitae
+              quod laborum eos, ratione cumque maiores vel eaque, labore eius
+              quas.
+            </p>
+            <p class="precio">$3,000,000</p>
+            <a class="btn-compras" href="#">Agregar al carrito</a>
+          </div>
+          <!-- Info de producto -->
+        </div>
+        <!-- Producto -->
+
+        <div class="producto">
+          <img src="assets/producto4.jpg" alt="Imagen Producto" />
+
+          <div class="texto-producto">
+            <h3>Producto 4</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit eos
+              quis nesciunt et accusamus, explicabo illum. Molestias, modi vitae
+              quod laborum eos, ratione cumque maiores vel eaque, labore eius
+              quas.
+            </p>
+            <p class="precio">$4,000,000</p>
+            <a class="btn-compras" href="#">Agregar al carrito</a>
+          </div>
+          <!-- Info de producto -->
+        </div>
+        <!-- Producto -->
+
+        <div class="producto">
+          <img src="assets/producto5.jpg" alt="Imagen Producto" />
+
+          <div class="texto-producto">
+            <h3>Producto 5</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit eos
+              quis nesciunt et accusamus, explicabo illum. Molestias, modi vitae
+              quod laborum eos, ratione cumque maiores vel eaque, labore eius
+              quas.
+            </p>
+            <p class="precio">$5,200,000</p>
+            <a class="btn-compras" href="#">Agregar al carrito</a>
+          </div>
+          <!-- Info de producto -->
+        </div>
+        <!-- Producto -->
+      </div>
+      <!-- Fin de elistados de productos -->
     </main>
 
-
-
     <!-- Aside -->
-    <aside>
-        <h2>Patrocinadores</h2>
-        <ul>
-            <li>Muebles XYZ</li>
-            <li>Decoraciones ABC</li>
-            <li>Colchones QWE</li>
-        </ul>
+    <aside class="contenedor-patrocinadores">
+      <h2>Patrocinadores</h2>
+      <ul>
+        <li>Muebles XYZ</li>
+        <li>Decoraciones ABC</li>
+        <li>Colchones QWE</li>
+      </ul>
     </aside>
 
-
-    <!-- Footer -->
-    <footer>
+   
+   <!-- Footer con su estructura dividida por divs y enlaces -->
+    <footer class="site-footer">
+      <div class="grid-footer contenedor">
         <div>
+          <h3>Categorias</h3>
 
-            <h3>Soporte</h3>
-            <nav>
-                <a href="#">Preguntas frecuentes</a>
-                <a href="#">Ayuda en Linea</a>
-                <a href="#">Confianza y Seguridad</a>
-            </nav>
-
+          <nav class="footer-menu">
+            <a href="#">Oficina</a>
+            <a href="#">Cocina</a>
+            <a href="#">Jardin</a>
+            <a href="#">Cochera</a>
+            <a href="#">Dormitorios</a>
+          </nav>
         </div>
-
-
         <div>
-            <h3>Contactenos</h3>
-            <nav>
-                <p><span>Tel:</span>61077986</p>
-                <a href="ejemplo@gmail">ejemplo@gmail</a>
-                <a href="insta">icono insta</a>
-                <a href="whatssap">icono whatssap</a>
-            </nav>
+          <h3>Sobre Nosotros</h3>
 
+          <nav class="footer-menu">
+            <a href="#">Nuestra Historia</a>
+            <a href="#">Mision</a>
+            <a href="#">Carreras</a>
+            <a href="#">Politicas de Privacidad</a>
+            <a href="#">Terminos de Servicio</a>
+          </nav>
         </div>
+        <div>
+          <h3>Soporte</h3>
 
+          <nav class="footer-menu">
+            <a href="#">Preguntas frecuentes</a>
+            <a href="#">Ayuda en Linea</a>
+            <a href="#">Confianza y Seguridad</a>
+          </nav>
+        </div>
+      </div>
 
-        <p>&copy; 2025 Tienda Muebles. Todos los derechos reservados.</p>
+      <p class="copyright">&copy; 2023 Tienda Muebles. Todos los derechos reservados.</p>
     </footer>
-
-</body>
-
+  </body>
 </html>
