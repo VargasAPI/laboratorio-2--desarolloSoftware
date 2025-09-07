@@ -1,84 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
+    <link rel="stylesheet" href="css/base-registro.css" />
+    <link rel="stylesheet" href="css/components.css" />
+  </head>
 
-<body>
+  <body></body>
 
-</body>
-
-
-<header>
+  <header>
     <h1 class="nombre-sitio">Tienda <span>Muebles</span></h1>
-</header>
-<!-- Menú con anclajes internos -->
-<nav class="nav-principal contenedor">
-    <a href="index.html">Inicio</a>
-    <a href="categorias">Categorías</a>
-    <a href="#sobre-nosotros">Sobre Nosotros</a>
-    <a href="productos">Productos</a>
-    <a href="#agenda">Agenda</a>
-</nav>
+  </header>
+  <!-- Menú con anclajes internos -->
+  <div class="contenedor-navegacion">
+    <nav class="nav-principal contenedor">
+      <a class="btn-nav" href="index.html">Inicio</a>
+      <a class="btn-nav" href="categorias">Categorías</a>
+      <a class="btn-nav" href="#sobre-nosotros">Sobre Nosotros</a>
+      <a class="btn-nav" href="productos">Productos</a>
+      <a class="btn-nav" href="#agenda">Agenda</a>
+    </nav>
+  </div>
 
-<div class="hero"></div>
+  <div class="hero"></div>
 
-<!--  Registro -->
-<section id="registro">
+  <!--  Registro -->
+  <section class="registro">
     <h2>Registro</h2>
     <form>
-        <label for="nombre">Nombre:</label>
-        <input type="text" id="nombre" name="nombre" required />
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" name="nombre" required />
 
-        <label for="correo">Correo:</label>
-        <input type="email" id="correo" name="correo" required />
+      <label for="correo">Correo:</label>
+      <input type="email" id="correo" name="correo" required />
 
-        <label for="categoria">Categoría de interés:</label>
-        <select id="categoria" name="categoria">
-            <option value="oficina">Oficina</option>
-            <option value="hogar">Hogar</option>
-            <option value="cocina">Cocina</option>
-        </select>
+      <label for="categoria">Categoría de interés:</label>
+      <select id="categoria" name="categoria">
+        <option value="oficina">Oficina</option>
+        <option value="hogar">Hogar</option>
+        <option value="cocina">Cocina</option>
+      </select>
 
-        <button type="submit" aria-label="Enviar formulario de registro">Enviar</button>
+      <button type="submit" aria-label="Enviar formulario de registro">
+        Enviar
+      </button>
     </form>
-</section>
+  </section>
 
-
-
-
-<!-- Footer -->
-<footer>
-    <div>
-
-        <h3>Soporte</h3>
-        <nav>
+  <!-- Footer -->
+  <footer>
+    <div class="site-footer">
+      <div class="grid-footer contenedor">
+        <div>
+          <h3>Soporte</h3>
+          <nav class="footer-menu">
             <a href="#">Preguntas frecuentes</a>
-            <a href="#">Ayuda en Linea</a></>
-        </nav>
+            <a href="#">Ayuda en Linea</a>
+          </nav>
+        </div>
 
+        <div>
+          <h3>Contáctenos</h3>
+          <nav class="footer-menu">
+            <p><span>Tel:</span> 61077986</p>
+            <a href="mailto:ejemplo@gmail.com">
+              <i class="fa-solid fa-envelope"></i>tiendaMueblesCR@gmail.com
+            </a>
+            <a href="https://instagram.com" target="_blank">
+              <i class="fa-brands fa-instagram"></i> Instagram
+            </a>
+            <a href="https://wa.me/50661077986" target="_blank">
+              <i class="fa-brands fa-whatsapp"></i> WhatsApp
+            </a>
+          </nav>
+        </div>
+      </div>
+
+      <p class="copyright">
+        &copy; 2025 Tienda Muebles. Todos los derechos reservados.
+      </p>
     </div>
-
-
-    <div>
-        <h3>Contactenos</h3>
-        <nav>
-            <p><span>Tel:</span>61077986</p>
-            <a href="ejemplo@gmail">ejemplo@gmail</a>
-            <a href="insta">icono insta</a>
-            <a href="whatssap">icono whatssap</a>
-        </nav>
-
-    </div>
-
-    <p>&copy; 2025 Tienda Muebles. Todos los derechos reservados.</p>
-</footer>
-
-
-
-
-
+  </footer>
 </html>
