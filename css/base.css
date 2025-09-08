@@ -1,79 +1,98 @@
 html {
   box-sizing: border-box;
-  font-size: 62.5%;
-  /* HACK: 1rem = 10px */
+  font-size: 62.5%; /* 1REM = 10px */
 }
-
 *,
 *:before,
 *:after {
   box-sizing: inherit;
 }
-
 body {
   font-family: "Raleway", sans-serif;
   font-size: 1.6rem;
-  /* 16px */
   line-height: 2;
-  /*line-height es el espacio entre lineas*/
 }
 
 /* Globales */
-
 h1,
 h2,
 h3 {
-  font-family: "Playfair", serif;
-  margin: 0 0 5rem 0;
-  /*margin: top right bottom left*/
+  font-family: "Playfair Display", serif;
+  margin: 0 0 2rem 0;
 }
-
-.contenedor {
-  /*max-width: 1200px; es el ancho maximo de la pagina*/
-  max-width: 120rem;
-  margin: 0 auto;
-  /*centra el contenedor*/
-}
-
-a {
-  text-decoration: none;
-  /*quita el subrayado*/
-  color: black;
-}
-
 h1 {
   font-size: 5rem;
+}
+@media (min-width: 768px) {
+  h1 {
+    font-size: 5rem;
+  }
 }
 
 h2 {
   font-size: 4rem;
 }
-
+@media (min-width: 768px) {
+  h2 {
+    font-size: 4rem;
+  }
+}
 h3 {
   font-size: 3rem;
 }
-
+@media (min-width: 768px) {
+  h3 {
+    font-size: 3rem;
+  }
+}
+a {
+  text-decoration: none;
+  color: #000;
+}
+.contenedor {
+  max-width: 120rem;
+  margin: 0 auto;
+}
 img {
   max-width: 100%;
   display: block;
 }
 
-/********************************************/
-
-/*Utilidades*/
-.text-center {
+.btn {
+  background-color: #8cbc00;
+  display: block;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 900;
+  padding: 1rem;
+  transition: background-color 0.3s ease-out;
   text-align: center;
-  /*centra el texto*/
+  border: none;
+}
+.btn:hover {
+  background-color: #769c02;
+  cursor: pointer;
 }
 
-/*********************************************/
+/** Utilidades */
+.text-center {
+  text-align: center;
+}
 
-/*Header y navegacion*/
+.max-width-30 {
+  max-width: 30rem;
+}
+
+/** Header y Navegacion **/
 .nombre-sitio {
-  /*margin top and botton es para agregar relleno arriba y abajo*/
   margin-top: 5rem;
   text-align: center;
-  /*centra el texto*/
+}
+.nombre-sitio span {
+  color: #037bc0;
+}
+.contenedor-navegacion {
+  border-top: 0.1rem solid #e1e1e1;
 }
 
 .nombre-sitio span {
@@ -96,26 +115,113 @@ nav a {
   
 }
 
+/* Nav contenedor */
 .nav-principal {
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+  padding: 2rem 0;
   display: flex;
-  justify-content: space-between;
-  transition: background-color .3s ease-out;
-  /*espacio entre los elementos*/
+  flex-direction: column;
+  align-items: center;
+  
+}
+
+/* Checkbox oculto */
+.nav-checkbox {
+  display: none;
+}
+
+/* Botón hamburguesa */
+.nav-toggle {
+  cursor: pointer;
+  padding: 0.5rem;
+  display: inline-block;
+
+}
+
+.hamburger .bar {
+  display: block;
+  width: 24px;
+  height: 2px;
+  margin: 4px 0;
+  background-color: #111;
+  border-radius: 2px;
+}
+
+/* Menú oculto por defecto en móvil */
+.nav-menu {
+  display: none;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+  align-items: center;
+}
+
+/* Cuando el checkbox está marcado → mostrar menú */
+.nav-checkbox:checked ~ .nav-menu {
+  display: flex;
+}
+
+/* Enlaces */
+.nav-menu a {
+  text-decoration: none;
+  color: #111;
+  padding: 0.5rem 0;
 }
 
 
+/* Desktop */
+@media (min-width: 768px) {
+  .nav-principal {
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  /* Ocultar botón en desktop */
+  .nav-toggle {
+    display: none;
+  }
+
+  /* Menú siempre visible */
+  .nav-menu {
+    display: flex !important;
+    flex-direction: row;
+    gap: 1rem;
+    width: auto;
+  }
+
+  .nav-menu a {
+    padding: 0.5rem 1rem;
+  }
+}
+
+/* Hover al botón hamburguesa */
+.nav-toggle:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+}
+
+.nav-toggle:hover .bar {
+  background-color: #037bc0; /* cambia color */
+}
+
+.nav-toggle:hover .bar:nth-child(1) {
+  transform: translateY(-2px);
+}
+
+.nav-toggle:hover .bar:nth-child(3) {
+  transform: translateY(2px);
+}
+
 .hero {
   background-image: url(../assets/principal.jpg);
-  /*ruta de la imagen*/
   background-repeat: no-repeat;
-  /*no se repite la imagen*/
   background-size: cover;
-  /*cubre todo el espacio disponible*/
   background-position: center center;
-  /* X y Y*/
-  height: 55rem;
+  height: 25rem;
+}
+@media (min-width: 768) {
+  .hero {
+    height: 55rem;
+  }
 }
 
 /*Estilo de agenda de ofertas*/
@@ -162,39 +268,44 @@ nav a {
   /*borde inferior de las celdas*/
 }
 
+
+
+/** Categorias **/
 .categorias {
-  padding-top: 5rem;
+  padding: 5rem 0;
+}
+.categoria {
+  margin-bottom: 2rem;
 }
 
-.categorias h2 {
-  text-align: center;
-  /*centra el texto*/
+@media (min-width: 768px) {
+  .categoria {
+    margin-bottom: 0;
+  }
 }
 
+.categoria img {
+  width: 100%;
+}
 .categoria a {
   text-align: center;
-  /*centra el texto*/
   display: block;
-  /*hace que el enlace ocupe todo el espacio*/
   padding: 2rem;
   font-size: 2rem;
 }
 
-.listado-categorias {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  /*3 columnas de igual tamaño para las fotos*/
-  gap: 2rem;
-  /*espacio entre las columnas*/
-}
-
 .categoria a:hover {
   background-color: #037bc0;
-  color: #fff;
-  border-bottom-left-radius: 1rem;
-  /*redondea la esquina izquierda*/
+  color: #ffffff;
   border-bottom-right-radius: 1rem;
-  /*redondea la esquina derecha*/
+}
+
+@media (min-width: 768px) {
+  .listado-categorias {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
 }
 
 /** Bloque Nosotros */
