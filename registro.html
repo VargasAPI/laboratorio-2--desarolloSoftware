@@ -11,6 +11,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="css/base-registro.css" />
     <link rel="stylesheet" href="css/components.css" />
+  
   </head>
 
   <body></body>
@@ -20,14 +21,31 @@
   </header>
   <!-- Menú con anclajes internos -->
   <div class="contenedor-navegacion">
-    <nav class="nav-principal contenedor">
+  <nav class="nav-principal contenedor" aria-label="Menú principal">
+    <!-- Input hidden (checkbox hack) -->
+    <input type="checkbox" id="nav-toggle" class="nav-checkbox" aria-hidden="true">
+
+    <!-- Label actúa como botón -->
+    <label for="nav-toggle" class="nav-toggle" aria-label="Abrir menú">
+      <span class="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </span>
+    </label>
+
+    <!-- Menú -->
+    <div id="nav-menu" class="nav-menu">
       <a class="btn-nav" href="index.html">Inicio</a>
       <a class="btn-nav" href="categorias">Categorías</a>
-      <a class="btn-nav" href="#sobre-nosotros">Sobre Nosotros</a>
+      <a class="btn-nav" href="#sobre-nosotros">Nosotros</a>
       <a class="btn-nav" href="productos">Productos</a>
       <a class="btn-nav" href="#agenda">Agenda</a>
-    </nav>
-  </div>
+      <a class="btn-nav" href="registro.html">Registro</a>
+      <a class="btn-nav" href="https://www.tec.ac.cr" target="_blank" rel="noopener noreferrer">TEC</a>
+    </div>
+  </nav>
+</div>
 
   <div class="hero"></div>
 

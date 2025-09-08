@@ -63,32 +63,131 @@ h3 {
 
 /*********************************************/
 
-/*Header y navegacion*/
-.nombre-sitio{
-    margin-top: 5rem;
-    text-align: center;
+/** Header y Navegacion **/
+.nombre-sitio {
+  margin-top: 5rem;
+  text-align: center;
 }
-
-.nombre-sitio span{
-    color: #037bc0;;
+.nombre-sitio span {
+  color: #037bc0;
 }
-
-.nav-principal{
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-    display: flex;
-    justify-content:space-between;
-}
-
 .contenedor-navegacion {
-  border-top: 1px solid #e1e1e1;
+  border-top: 0.1rem solid #e1e1e1;
+}
+
+/* .nav-principal {
+  padding: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media (min-width: 768px) {
+  .nav-principal {
+    justify-content: space-between;
+    flex-direction: row;
+  }
+}
+ */
+
+/* Nav contenedor */
+.nav-principal {
+  padding: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   
 }
 
-nav a {
-  text-transform: uppercase;
-   
+/* Checkbox oculto */
+.nav-checkbox {
+  display: none;
 }
+
+/* Botón hamburguesa */
+.nav-toggle {
+  cursor: pointer;
+  padding: 0.5rem;
+  display: inline-block;
+
+}
+
+.hamburger .bar {
+  display: block;
+  width: 24px;
+  height: 2px;
+  margin: 4px 0;
+  background-color: #111;
+  border-radius: 2px;
+}
+
+/* Menú oculto por defecto en móvil */
+.nav-menu {
+  display: none;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+  align-items: center;
+}
+
+/* Cuando el checkbox está marcado → mostrar menú */
+.nav-checkbox:checked ~ .nav-menu {
+  display: flex;
+}
+
+/* Enlaces */
+.nav-menu a {
+  text-decoration: none;
+  color: #111;
+  padding: 0.5rem 0;
+}
+
+
+/* Desktop */
+@media (min-width: 768px) {
+  .nav-principal {
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  /* Ocultar botón en desktop */
+  .nav-toggle {
+    display: none;
+  }
+
+  /* Menú siempre visible */
+  .nav-menu {
+    display: flex !important;
+    flex-direction: row;
+    gap: 1rem;
+    width: auto;
+  }
+
+  .nav-menu a {
+    padding: 0.5rem 1rem;
+  }
+}
+
+/* Hover al botón hamburguesa */
+.nav-toggle:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+}
+
+.nav-toggle:hover .bar {
+  background-color: #037bc0; /* cambia color */
+}
+
+.nav-toggle:hover .bar:nth-child(1) {
+  transform: translateY(-2px);
+}
+
+.nav-toggle:hover .bar:nth-child(3) {
+  transform: translateY(2px);
+}
+
+
+
+
 
 /**Registro**/
 .registro{
@@ -130,11 +229,11 @@ nav a {
   outline-offset: 3px;         /* separación entre borde y botón */
 }
 
-/**Footer**/
-.site-footer{
-   border-top: 1px solid #e1e1e1;
+/** Footer Base **/
+.site-footer {
+  border-top: 1px solid #e1e1e1;
   margin-top: 5rem;
-  padding: 5rem;
+  padding: 5rem 2rem;
 }
 .site-footer h3 {
   margin-bottom: 0.5rem;
@@ -142,23 +241,42 @@ nav a {
 .grid-footer {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  /*3 columnas de igual tamaño para las fotos*/
   gap: 2rem;
 }
 .footer-menu a {
   display: block;
-  transition: background-color 0.3s ease-out;
+  transition: color 0.3s ease-out;
 }
 .footer-menu a:hover {
   color: #037bc0;
 }
-
 .copyright {
   text-align: center;
-  /*centra el texto*/
   margin-top: 2rem;
   color: #666;
   font-size: 1.4rem;
+}
+
+/** Responsive **/
+@media (max-width: 1024px) {
+  .grid-footer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .grid-footer {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .site-footer {
+    padding: 3rem 1.5rem;
+  }
+
+  .footer-menu a {
+    font-size: 1.5rem;
+  }
 }
 
 

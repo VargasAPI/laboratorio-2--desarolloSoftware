@@ -309,199 +309,199 @@ nav a {
 }
 
 /** Bloque Nosotros */
-#sobre-nosotros {
+.sobre-nosotros {
   background-image: linear-gradient(
-      to right,
+      to bottom,
       transparent 50%,
       #037bc0 50%,
       #037bc0 100%
     ),
     url(../assets/nosotros.jpg);
-
-  background-position: left center;
-
-  padding: 10rem 0;
-  /*padding: top and bottom, left and right*/
+  background-position: center, top left;
   background-repeat: no-repeat;
+  background-size: 100%, 70rem;
+}
 
-  background-size: 100%, 130rem;
-  /*linear al 100 y la imagen al 120rem*/
-
-  margin-top: 1rem;
+@media (min-width: 768px) {
+  .sobre-nosotros {
+    background-image: linear-gradient(
+        to right,
+        transparent 50%,
+        #037bc0 50%,
+        #037bc0 100%
+      ),
+      url(../assets/nosotros.jpg);
+    background-position: left center;
+    padding: 10rem 0;
+    background-size: 100%, 160rem;
+  }
 }
 
 .sobre-nosotros-grid {
-  display: flex;
-  justify-content: flex-end;
-  /*alinea el contenido a la derecha*/
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+}
+
+@media (min-width: 768px) {
+  .sobre-nosotros-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: unset; /*Unset: En este tamano no quiero tener el template-row*/
+    column-gap: 10rem;
+  }
 }
 
 .texto-nosotros {
-  flex-basis: 50%;
-  /*ocupa el 50% del espacio*/
-  padding-left: 10rem;
+  grid-row: 2 / 3;
   color: #fff;
+  padding: 5rem 0;
 }
 
-.texto-nosotros blockquote {
-  text-align: end;
+@media (min-width: 768px) {
+  .texto-nosotros {
+    grid-column: 2 / 3;
+    
+  }
 }
+
 
 /** Listado de productos*/
-.listado-productos {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  /*6 columnas de igual tamaño para las fotos*/
-  column-gap: 2rem;
-  /*espacio entre las columnas*/
-  row-gap: 2rem;
-  /*espacio entre las filas*/
+/** Listado de Productos **/
+.contenido-principal {
+  padding-top: 5rem;
 }
 
-.producto:nth-child(1) {
-  grid-column-start: 1;
-  /*comienza en la columna 1*/
-  grid-column-end: 7;
-  /*termina en la columna 7*/
-  display: grid;
-  grid-template-columns: 3fr 1fr;
-  /*3 columnas para la imagen y 1 para el texto*/
-}
+@media (min-width: 768px) {
+    .listado-productos {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        gap: 2rem;
+    }
 
-.producto:nth-child(1) img {
-  height: 43rem;
-  /*altura de la imagen*/
-  min-height: 100%;
-  /*minimo 100% de la altura del contenedor*/
-  width: 100%;
-  /*ancho de la imagen*/
-  object-fit: cover;
-  /*cubre todo el espacio disponible sin deformar la imagen*/
-}
+    .producto:nth-child(1) {
+        grid-column-start: 1;
+        grid-column-end: 7;
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+    }
 
-.producto:nth-child(2) {
-  grid-column-start: 1;
-  /*comienza en la columna 1*/
-  grid-column-end: 4;
-  /*termina en la columna 4*/
-}
+    .producto:nth-child(1) img {
+        height: 43rem;
+        width: 100%;
+        object-fit: cover;
+    }
 
-.producto:nth-child(3) {
-  grid-column-start: 4;
-  /*comienza en la columna 4*/
-  grid-column-end: 7;
-  /*termina en la columna 7*/
-}
+    .producto:nth-child(2) {
+        grid-column-start: 1;
+        grid-column-end: 4;
+    }
 
-.producto:nth-child(4) {
-  grid-column-start: 1;
-  /*comienza en la columna 1*/
-  grid-column-end: 4;
-  /*termina en la columna 4*/
-}
+    .producto:nth-child(2) img,
+    .producto:nth-child(3) img {
+        height: 30rem;
+        width: 100%;
+        object-fit: cover;
+    }
 
-.producto:nth-child(5) {
-  grid-column-start: 4;
-  /*inicia en la columna 4*/
-  grid-column-end: 7;
-  /*termina en la columna 7*/
-}
+    .producto:nth-child(3) {
+        grid-column-start: 4;
+        grid-column-end: 7;
+    }
 
-.producto:nth-child(2) img,
-.producto:nth-child(3) img,
-.producto:nth-child(4) img,
-.producto:nth-child(5) img {
-  height: 30rem;
-  width: 100%;
-  /*ancho de la imagen*/
-  object-fit: cover;
-  /*cubre todo el espacio disponible sin deformar la imagen*/
+    .producto:nth-child(4) {
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+
+    .producto:nth-child(5) {
+        grid-column-start: 3;
+        grid-column-end: 5;
+    }
+
+    .producto:nth-child(6) {
+        grid-column-start: 5;
+        grid-column-end: 7;
+    }
+
 }
 
 .producto {
   background-color: #037bc0;
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 768px) {
+    .producto {
+        margin-bottom: 0;
+    }
+
+}
+
+.producto:last-of-type{
+     margin-bottom: 0;
 }
 
 .texto-producto {
   text-align: center;
-  /*centra el texto*/
-  color: #fff;
+  color: #ffffff;
   padding: 2rem;
 }
-
-texto-producto h3 {
+.texto-producto h3 {
   margin: 0;
 }
-
-texto-producto p {
+.texto-producto p {
   margin: 0 0 0.5rem 0;
 }
-
 .texto-producto .precio {
   font-size: 2.8rem;
   font-weight: 900;
 }
 
-.contenedor-patrocinadores {
-  margin: 2rem auto;
-  padding: 2rem;
-  margin-top: 2rem;
-  max-width: 120rem;
-  background-color: #037bc0;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  text-align: center;
-  /*centra el texto*/
-  color: #fff;
-}
 
-.contenedor-patrocinadores ul {
-  list-style: none;
-  /*quita los puntos de la lista*/
-  padding: 0;
-  /*quita el padding*/
-  margin: 0;
-  /*quita el margen*/
-  display: flex;
-  justify-content: center;
-  /*centra los elementos*/
-  gap: 20rem;
-  /*espacio entre los elementos*/
-  margin-bottom: 4rem;
-  font-size: 1.9rem;
-  font-weight: 900;
-}
 
-/*Footer*/
+/** Footer **/
 .site-footer {
   border-top: 1px solid #e1e1e1;
   margin-top: 5rem;
-  padding: 5rem;
+  padding-top: 5rem;
 }
-
 .site-footer h3 {
   margin-bottom: 0.5rem;
+  text-align: center;
 }
 
-.grid-footer {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  /*3 columnas de igual tamaño para las fotos*/
-  gap: 2rem;
+@media (min-width: 768px) {
+    .site-footer h3 {
+        text-align: left;
+    }
+    .grid-footer {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+    }
+
+}
+/*Primer niveo de hijos del div*/
+.grid-footer > div{
+    margin-bottom: 2rem;
+}
+
+@media (min-width: 768px) {
+    .grid-footer > div{
+    margin-bottom: 2;
+}
 }
 
 .footer-menu a {
   display: block;
-  transition: background-color 0.3s ease-out;
+  text-align: center;
 }
-
-.footer-menu a:hover {
-  color: #037bc0;
+@media (min-width: 768px) {
+    .footer-menu a{
+        text-align: left;
+    }
 }
 
 .copyright {
+  margin-top: 5rem;
   text-align: center;
-  /*centra el texto*/
-  margin-top: 2rem;
-  color: #666;
-  font-size: 1.4rem;
 }
